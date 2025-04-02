@@ -1,4 +1,4 @@
-# Trivia AI - Generador de Preguntas con IA
+# Trivia Generator - Generador de Preguntas con IA
 
 ## Descripción
 Trivia AI es una aplicación desarrollada en **Python** que permite generar preguntas a partir de un texto utilizando inteligencia artificial. Además, los usuarios pueden corregir y modificar las preguntas en lenguaje natural. Es una herramienta ideal para juegos de trivia o para estudiar de manera interactiva.
