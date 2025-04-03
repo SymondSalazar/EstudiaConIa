@@ -6,7 +6,7 @@ Trivia AI es una aplicación desarrollada en **Python** que permite generar preg
 ## Tecnologías Utilizadas
 - [Python](https://www.python.org/)
 - [Flet](https://flet.dev/) - Framework para interfaces de usuario
-- [OpenAI](https://openai.com/) - API para generar preguntas con IA
+- [OpenAI](https://openai.com/) - Libreria usada para el manejo del LLM
 - [python-dotenv](https://pypi.org/project/python-dotenv/) - Manejo de variables de entorno
 
 ## Estructura del Proyecto
