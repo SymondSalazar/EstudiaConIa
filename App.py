@@ -18,16 +18,18 @@ def main(page):
         print("Generando preguntas, por favor no hacer nada")
         #Genera el texto que despues sera procesado
         text = generate_Questions(text_input.value)
-
+        if text:
         #Actualiza el input del usuario
-        text_input.value = ""
-        text_input.hint_text = "Tambien puedes pedir que se mejore una pregunta."
-        text_input.focus()
-        text_input.update()
+            text_input.value = ""
+            text_input.hint_text = "Tambien puedes pedir que se mejore una pregunta."
+            text_input.focus()
+            text_input.update()
 
         #Procesa y genera todas las preguntas
-        questions = gen_Dictionary(text)        
-        show_Questions()
+            questions = gen_Dictionary(text)        
+            show_Questions()
+        else:
+            print("Intente de nuevo")
         page.update()
 
     #Funcion para controlar los archivos
@@ -203,7 +205,7 @@ def main(page):
     )
 
     #Titulo
-    title_text = ft.Text(value="Trivia",size=50,color=ft.colors.GREEN)
+    title_text = ft.Text(value="Trivia",size=50,color=ft.Colors.GREEN)
 
     #Se añade al elemento contenedor principal todos los elementos
     main_column.controls.append(title_text)
