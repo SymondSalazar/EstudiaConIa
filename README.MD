@@ -61,11 +61,11 @@ La interfaz se abrirá y podrás comenzar a generar preguntas a partir de textos
 
 ## 🔧 IMPORTANTE: Configurar el modelo de lenguaje
 
-En el archivo `Gen_Questions.py`, **debes modificar la variable `modelo`** para utilizar el modelo de lenguaje de tu preferencia.
+En el archivo `utils/Gen_Questions.py`, **debes modificar la variable `modelo`** para utilizar el modelo de lenguaje de tu preferencia.
 
 ```python
 # Ejemplo:
-modelo = "google/gemini-2.0-flash-exp:free"
+model = "google/gemini-2.0-flash-exp:free"
 ```
 
 Puedes consultar y elegir entre los modelos disponibles en la siguiente página:  
