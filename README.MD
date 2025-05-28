@@ -59,9 +59,19 @@ python App.py
 
 La interfaz se abrirá y podrás comenzar a generar preguntas a partir de textos.
 
-## IMPORTANTE
+## 🔧 IMPORTANTE: Configurar el modelo de lenguaje
 
-En el archivo Gen_Questions modificar la variable modelo, al modelo de su preferencia.
+En el archivo `Gen_Questions.py`, **debes modificar la variable `modelo`** para utilizar el modelo de lenguaje de tu preferencia.
+
+```python
+# Ejemplo:
+modelo = "google/gemini-2.0-flash-exp:free"
+```
+
+Puedes consultar y elegir entre los modelos disponibles en la siguiente página:  
+🌐 [Modelos disponibles en OpenRouter](https://openrouter.ai/docs#models)
+
+> Asegúrate de usar un modelo compatible con tu configuración de API.
 
 ## Funcionalidades Principales
 
