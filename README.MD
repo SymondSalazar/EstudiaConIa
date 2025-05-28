@@ -1,15 +1,18 @@
 # Trivia Generator - Generador de Preguntas con IA
 
 ## Descripción
+
 Trivia AI es una aplicación desarrollada en **Python** que permite generar preguntas a partir de un texto utilizando inteligencia artificial. Además, los usuarios pueden corregir y modificar las preguntas en lenguaje natural. Es una herramienta ideal para juegos de trivia o para estudiar de manera interactiva.
 
 ## Tecnologías Utilizadas
+
 - [Python](https://www.python.org/)
 - [Flet](https://flet.dev/) - Framework para interfaces de usuario
 - [OpenAI](https://openai.com/) - Libreria usada para el manejo del LLM
 - [python-dotenv](https://pypi.org/project/python-dotenv/) - Manejo de variables de entorno
 
 ## Estructura del Proyecto
+
 El proyecto está organizado de la siguiente manera:
 
 ```
@@ -25,6 +28,7 @@ Trivia_Generator/
 ```
 
 ## Instalación
+
 1. Clona el repositorio:
    ```sh
    git clone https://github.com/SymondSalazar/Trivia_Generator.git
@@ -46,13 +50,21 @@ Trivia_Generator/
    ```
 
 ## Uso
+
 Para ejecutar la aplicación:
+
 ```sh
 python App.py
 ```
+
 La interfaz se abrirá y podrás comenzar a generar preguntas a partir de textos.
 
+## IMPORTANTE
+
+En el archivo Gen_Questions modificar la variable modelo, al modelo de su preferencia.
+
 ## Funcionalidades Principales
+
 ✅ **Generación de preguntas con IA** a partir de cualquier texto.
 ✅ **Corrección y edición de preguntas** con lenguaje natural.
 ✅ **Guardado y carga de preguntas en JSON** para reutilizarlas.
@@ -62,4 +74,3 @@ La interfaz se abrirá y podrás comenzar a generar preguntas a partir de textos
 
 📌 **Autor:** SymondSalazar
 📌 **Repositorio:** [GitHub](https://github.com/SymondSalazar/Trivia_Generator)
-

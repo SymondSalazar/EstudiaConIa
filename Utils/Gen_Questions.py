@@ -9,7 +9,7 @@ load_dotenv()
 API_KEY = os.getenv("API_KEY")
 
 client = OpenAI(api_key=API_KEY,base_url="https://openrouter.ai/api/v1")
-
+model = "google/gemini-2.0-flash-exp:free"
 
 chat_history = [{
         "role": "system",
@@ -53,7 +53,7 @@ def generate_Questions(text):
     max_attempts = 4
     for attempts in range(max_attempts):
         chat = client.chat.completions.create(
-            model="google/gemini-2.5-pro-exp-03-25:free",
+            model=model,
             messages=chat_history
             )
         if chat.choices[0].message.content: 
