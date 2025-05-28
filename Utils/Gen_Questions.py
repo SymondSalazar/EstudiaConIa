@@ -37,6 +37,7 @@ chat_history = [{
 -Si te pido intercambiar el orden de algunas preguntas, retornaras las preguntas especificadas cambiadas de orden y las que no en su orden original
 -Asi mismo si te pido intercambiar una pregunta corregida por una que esta actualmente tu buscas en el historial la pregunta especificada antes de la correccion y las intercambias
 -Y por ultimo si te pido deshacer los cambios, tu me devolveras las preguntas generadas antes del cambio
+-Tienes terminantemente prohibido generar texto con algun formato como latex o markdown, todo debe ser texto plano
 """
 }]
 
