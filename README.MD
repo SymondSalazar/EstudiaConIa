@@ -61,7 +61,7 @@ La interfaz se abrirá y podrás comenzar a generar preguntas a partir de textos
 
 ## 🔧 IMPORTANTE: Configurar el modelo de lenguaje
 
-En el archivo `utils/Gen_Questions.py`, **debes modificar la variable `modelo`** para utilizar el modelo de lenguaje de tu preferencia.
+En el archivo `utils/Gen_Questions.py`, **debes modificar la variable `model`** para utilizar el modelo de lenguaje de tu preferencia.
 
 ```python
 # Ejemplo:
