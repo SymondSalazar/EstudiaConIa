@@ -69,7 +69,7 @@ modelo = "google/gemini-2.0-flash-exp:free"
 ```
 
 Puedes consultar y elegir entre los modelos disponibles en la siguiente página:  
-🌐 [Modelos disponibles en OpenRouter](https://openrouter.ai/docs#models)
+🌐 [Modelos disponibles en OpenRouter](https://openrouter.ai/models)
 
 > Asegúrate de usar un modelo compatible con tu configuración de API.
 
