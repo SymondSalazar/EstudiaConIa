@@ -1,4 +1,4 @@
-# Trivia Generator - Generador de Preguntas con IA
+# Este es un fork de Trivia Generator - Generador de Preguntas con IA
 
 ## Descripción
 
@@ -16,7 +16,7 @@ Trivia AI es una aplicación desarrollada en **Python** que permite generar preg
 El proyecto está organizado de la siguiente manera:
 
 ```
-Trivia_Generator/
+App/
 │-- App.py          # Archivo principal de la aplicación (usa Flet)
 │-- .env            # Archivo de variables de entorno (contiene API_KEY)
 │-- requirements.txt # Dependencias necesarias
@@ -31,8 +31,8 @@ Trivia_Generator/
 
 1. Clona el repositorio:
    ```sh
-   git clone https://github.com/SymondSalazar/Trivia_Generator.git
-   cd Trivia_Generator
+   git clone https://github.com/SymondSalazar/Vibe_Coding_View_EstudiaConIa.git
+   cd Vibe_Coding_View_EstudiaConIa
    ```
 2. Crea un entorno virtual (opcional pero recomendado):
    ```sh
