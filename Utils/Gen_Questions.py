@@ -4,14 +4,14 @@ from dotenv import load_dotenv
 import time
 
 
-
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
 
-client = OpenAI(api_key=API_KEY,base_url="https://openrouter.ai/api/v1")
+client = OpenAI(api_key=API_KEY, base_url="https://openrouter.ai/api/v1")
 model = "google/gemini-2.0-flash-exp:free"
 
-chat_history = [{
+chat_history = [
+    {
         "role": "system",
         "content": """-Eres una ia que ayuda a la creacion de preguntas sobre un texto proporcionado
 -Ten en cuenta que las preguntas generadas las usare para hacer un quiz y deben seguir un formato especifico, las preguntas no deben de ser de temas generales sino de las ideas principales del texto
@@ -38,42 +38,38 @@ chat_history = [{
 -Asi mismo si te pido intercambiar una pregunta corregida por una que esta actualmente tu buscas en el historial la pregunta especificada antes de la correccion y las intercambias
 -Y por ultimo si te pido deshacer los cambios, tu me devolveras las preguntas generadas antes del cambio
 -Tienes terminantemente prohibido generar texto con algun formato como latex o markdown, todo debe ser texto plano
-"""
-}]
+-Si te piden cosas como matrices o tablas o cosas graficas en dos dimensiones trata de hacerlas en texto plano o usar una nomenclatura parecida a un lenguaje de programacion por ejemplo matrices se representarian como listas de listas
+-Solo muestra estos objetos si estan en la pregunta de lo contrario no los muestres.
+""",
+    }
+]
 
 
 def generate_Questions(text):
-    global chat_history 
+    global chat_history
 
-    chat_history.append({
-        "role": "user",
-        "content":text
-    })
+    try:
+        chat_history.append({"role": "user", "content": text})
 
-    retry_delay = 2 #Tiempo de delay entre intento
-    max_attempts = 4
-    for attempts in range(max_attempts):
-        chat = client.chat.completions.create(
-            model=model,
-            messages=chat_history
-            )
-        if chat.choices[0].message.content: 
-            break
-        time.sleep(retry_delay)
+        chat = client.chat.completions.create(model=model, messages=chat_history)
 
-    if not chat.choices[0].message.content: 
-        return "1.-No se pudo generar preguntas \nA)Item vacio \nB)Item vacio \nC)Item vacio \nD)Item vacio \n--------"
-    
-    chat_history.append({
-        "role": "assistant",
-        "content": chat.choices[0].message.content
-    })
-    
-    return chat.choices[0].message.content
+        if not chat.choices[0].message.content:
+            return "1.-No se pudo generar preguntas \nA)Item vacio \nB)Item vacio \nC)Item vacio \nD)Item vacio \n--------"
+
+        chat_history.append(
+            {"role": "assistant", "content": chat.choices[0].message.content}
+        )
+
+        print("Preguntas generadas correctamente")
+        return chat.choices[0].message.content
+    except Exception:
+        pass
+
 
 def get_chat_history():
     global chat_history
     return chat_history
+
 
 def set_chat_history(chat_hist):
     global chat_history
