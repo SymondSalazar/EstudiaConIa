@@ -31,7 +31,7 @@ App/
 
 1. Clona el repositorio:
    ```sh
-   git clone https://github.com/SymondSalazar/Vibe_Coding_View_EstudiaConIa.git
+   git clone https://github.com/SymondSalazar/EstudiaConIa.git
    cd Vibe_Coding_View_EstudiaConIa
    ```
 2. Crea un entorno virtual (opcional pero recomendado):
